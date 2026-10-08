@@ -69,6 +69,12 @@ test('detectEngine：iOS 恒 wkwebview；国产内核先于 Blink；Firefox=geck
   assert.equal(detectEngine('', 'unknown'), 'unknown')
 })
 
+test('detectEngine：iOS 恒 wkwebview（即使 UA 带国产内核串，iOS 全系 WebKit）', () => {
+  const IOS_UC =
+    'Mozilla/5.0 (iPhone; CPU iPhone OS 17_5 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) UCBrowser/15.0.0.0 Mobile/15E148 Safari/604.1'
+  assert.equal(detectEngine(IOS_UC, 'ios'), 'wkwebview')
+})
+
 test('detectVersionBand：<os>-<主版本>；判不出落 unknown', () => {
   assert.equal(detectVersionBand(IPHONE_WX, 'ios'), 'ios-17')
   assert.equal(detectVersionBand(ANDROID_CHROME, 'android'), 'android-14')

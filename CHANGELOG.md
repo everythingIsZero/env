@@ -4,6 +4,12 @@
 
 ## [Unreleased]
 
+## [0.1.1] - 2026-10-08
+
+### Fixed
+
+- `detectEngine`：iOS 先于国产内核串判定（iOS 全系 WebKit，含 UC/夸克等 UA 一律 `wkwebview`），修正此前 iOS 被误判 `u4`。
+
 ## [0.1.0] - 2026-10-08
 
 ### Added
