@@ -1,0 +1,27 @@
+{
+  "name": "@hxym18/env",
+  "version": "0.1.0",
+  "description": "终端/环境判定：UA 指纹归一（container/os/engine/versionBand）+ 能力位（微信内/桌面微信/小程序/抖音/PWA/移动/桌面/小游戏）",
+  "type": "module",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/everythingIsZero/env.git"
+  },
+  "files": [
+    "src",
+    "README.md",
+    "CHANGELOG.md"
+  ],
+  "exports": {
+    ".": {
+      "types": "./src/index.d.ts",
+      "import": "./src/index.mjs",
+      "default": "./src/index.mjs"
+    },
+    "./package.json": "./package.json"
+  },
+  "scripts": {
+    "test": "node --test 'test/**/*.test.mjs'"
+  }
+}
