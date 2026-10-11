@@ -23,5 +23,11 @@
   },
   "scripts": {
     "test": "node --test 'test/**/*.test.mjs'"
+  },
+  "hxym18": {
+    "contracts": {
+      "capability-projection": "1+8f9e361b",
+      "contracts": "1+189b5717"
+    }
   }
 }
