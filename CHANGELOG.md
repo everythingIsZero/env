@@ -4,6 +4,16 @@
 
 ## [Unreleased]
 
+## [0.1.2] - 2026-10-11
+
+### Added
+
+- 包内**契约副本**声明（`hxym18.contracts`）：`capability-projection@1`（本包为 owner）。
+
+### Docs
+
+- 补「登录通道位取 `isWechatMobile`（`isWechat` 含桌面微信/小程序 webview，整体透传会把桌面微信送进 OAuth 死路）」的说明。
+
 ## [0.1.1] - 2026-10-08
 
 ### Fixed
