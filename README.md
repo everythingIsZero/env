@@ -43,6 +43,11 @@ const signals = {
 
 Taro/小程序侧按 Taro API 采集，或对无 UA 的宿主（小游戏）直接给显式信号（如 `isMiniGame`）。
 
+### 登录通道位取哪个？
+
+分流登录通道时取 **`isWechatMobile`**（＝移动微信内），**不要**用 `isWechat`——后者含桌面微信与小程序 webview。
+投影到 `@hxym18/auth` 的 `caps` 请用 `@hxym18/auth/core` 的 `loginCapsFromCapabilities()`（唯一桥接），勿各站手写。
+
 ## 边界与收敛
 
 - 语义与 `share-kit/src/core/probe.mjs` 一致。share-kit 按 **forward-only** 在下次因需求改动时切到本包依赖，
